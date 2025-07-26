@@ -1,43 +1,25 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Affichage 3D avec &lt;model-viewer&gt;</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Importation du composant model-viewer -->
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <title>GLB Viewer</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
-    body {
-      margin: 0;
-      background-color: #111;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+    body { margin: 0; background-color: black; }
     model-viewer {
-      width: 90vw;
-      height: 90vh;
-      border: 2px solid #444;
-      border-radius: 10px;
-      background-color: #222;
+      width: 100vw;
+      height: 100vh;
     }
   </style>
 </head>
 <body>
-
-  <!-- Affichage du modèle 3D -->
-  <model-viewer
-    src="https://github.com/ray12-ux/main/raw/refs/heads/main/1.glb"  <!-- Chemin vers ton fichier .glb -->
-    alt="Modèle 3D interactif"
+  <model-viewer 
+    src="https://github.com/ray12-ux/main/raw/refs/heads/main/1.glb" 
+    auto-rotate 
+    camera-controls 
+    background-color="#000000"
     ar
-    auto-rotate
-    camera-controls
-    environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr"
-    shadow-intensity="1"
-    exposure="1"
-  >
-  </model-viewer>
-
+  ></model-viewer>
 </body>
 </html>
+
